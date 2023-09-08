@@ -1,8 +1,7 @@
 import './globals.css'
+import { fixel, inter } from '@/styles/font'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Present - Automate Influencer marketing',
@@ -16,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${inter.variable} ${fixel.variable}`}>
         {children}
       </body>
-    </html>
+    </html >
   )
 }
