@@ -8,11 +8,32 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      animation: {
+        tilt: 'tilt 5s infinite linear',
       },
+      keyframes: {
+        tilt: {
+          '0%, 50%, 100%': {
+            transform: 'rotate(0deg)',
+          },
+          '25%': {
+            transform: 'rotate(0.5deg)',
+          },
+          '75%': {
+            transform: 'rotate(-0.5deg)',
+          },
+        },
+      },
+      colors: {
+        'background': '#0F1414',
+        'outline-gray': '#3A3A3A',
+        'dark-green': '#222F0A',
+        'light-green': '#C0F560',
+        'lime-bg': '#A4FF00'
+      },
+      backgroundImage: {
+        'star-pattern': "url('/star-bg.svg')",
+      }
     },
   },
   plugins: [],
