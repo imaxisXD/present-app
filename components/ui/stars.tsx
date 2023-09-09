@@ -1,7 +1,8 @@
 function Stars() {
-    return <>
-        <div id='stars'></div>
-    </>
+    return (
+        <div id='stars' ></div>
+
+    )
 }
 
 export default Stars;

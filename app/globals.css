@@ -26,7 +26,7 @@ body {
 #stars {
   width: 2px;
   height: 2px;
-  animation: animStar 200s ease infinite;
+  animation: animStar 500s linear infinite;
   box-shadow: 779px 1331px rgba(255, 255, 255, 0.8468827211192267), 324px 42px rgba(255, 255, 255, 0.3178345035682452), 303px 586px rgba(255, 255, 255, 0.43967618025929515),
     1312px 276px rgba(255, 255, 255, 0.854949135946804), 451px 625px rgba(255, 255, 255, 0.2383364546803564), 521px 1931px rgba(255, 255, 255, 0.9730804094532162), 1087px 1871px rgba(255, 255, 255, 0.9999054509484303),
     36px 1546px rgba(255, 255, 255, 0.7646762165795314), 132px 934px rgba(255, 255, 255, 0.6878431096074882), 1698px 901px rgba(255, 255, 255, 0.4708470886929818), 1418px 664px rgba(255, 255, 255, 0.7157409351046953),
@@ -250,10 +250,8 @@ body {
 #stars:after {
   position: absolute;
   top: 2000px;
-  width: 1px;
-  height: 1px;
-  background: red;
-  /* Generating random values between 1 and 0.1 for the box-shadow in random order */
+  width: 2px;
+  height: 2px;
   box-shadow: 779px 1331px rgba(255, 255, 255, 0.8468827211192267), 324px 42px rgba(255, 255, 255, 0.3178345035682452), 303px 586px rgba(255, 255, 255, 0.43967618025929515),
     1312px 276px rgba(255, 255, 255, 0.854949135946804), 451px 625px rgba(255, 255, 255, 0.2383364546803564), 521px 1931px rgba(255, 255, 255, 0.9730804094532162), 1087px 1871px rgba(255, 255, 255, 0.9999054509484303),
     36px 1546px rgba(255, 255, 255, 0.7646762165795314), 132px 934px rgba(255, 255, 255, 0.6878431096074882), 1698px 901px rgba(255, 255, 255, 0.4708470886929818), 1418px 664px rgba(255, 255, 255, 0.7157409351046953),
@@ -471,7 +469,6 @@ body {
     1387px 91px rgba(255, 255, 255, 0.03963529117996398), 1039px 439px rgba(255, 255, 255, 0.1915064964414623), 583px 1830px rgba(255, 255, 255, 0.9991549386502913),
     1671px 898px rgba(255, 255, 255, 0.3855904246829812), 351px 1402px rgba(255, 255, 255, 0.6116291917825612), 1491px 1610px rgba(255, 255, 255, 0.8814381572221107),
     1367px 150px rgba(255, 255, 255, 0.06482406583209574), 1031px 61px rgba(255, 255, 255, 0.13362220073506394);
-
 }
 
 @keyframes animStar {
@@ -481,13 +478,86 @@ body {
 
   to {
     transform: translateY(-2000px);
+    opacity: 0.5;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(139, 255, 134, 0.8));
+    background: linear-gradient(to right bottom, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.38));
     background-clip: text;
     color: transparent;
+    background-size: 300%;
+  }
+}
+
+
+
+.meteor-top {
+  transform: rotate(-180deg);
+  animation: beam-animate-top 3s linear;
+  animation-delay: var(--meteor-delay, 0s);
+  animation-duration: var(--meteor-duration, 2s);
+}
+
+.meteor-top::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--meteor-width, 50px);
+  height: 1px;
+  background: linear-gradient(90deg, #6366f1, #7dd3fc, transparent);
+}
+
+@keyframes beam-animate-top {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.meteor-side {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(-90deg);
+  animation: beam-animate-side 3s linear;
+  animation-delay: var(--meteor-delay, 0s);
+  animation-duration: var(--meteor-duration, 2s);
+}
+
+.meteor-side::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--meteor-width, 50px);
+  height: 1px;
+  background: linear-gradient(90deg, #6366f1, #7dd3fc, transparent);
+}
+
+@keyframes beam-animate-side {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 0;
   }
 }
