@@ -1,12 +1,12 @@
 'use client'
 import Balancer from 'react-wrap-balancer'
-import { Button } from "@/components/ui/button"
 import Stars from "@/components/ui/stars"
 import Image from "next/image"
 import { useInView } from "react-intersection-observer";
 import clsx from 'clsx';
 import Beam from '@/components/ui/beam'
 import { Meteors } from '@/components/ui/meteor'
+import { LinkButton } from '@/components/ui/linkbutton'
 
 
 
@@ -27,9 +27,9 @@ export default function Home() {
                         Present simplify and automate your influencer marketing.<br /> Allowing you to focus on growth.
                     </Balancer>
                 </h3>
-                <Button>Early Access</Button>
+                <LinkButton href='/home'>Test</LinkButton>
             </div >
-            <section className="flex justify-center items-center mx-24 mt-40 [perspective:2000px] ">
+            <section className="flex justify-center items-center mx-24 mt-20 [perspective:2000px] ">
                 <div className={clsx("relative group w-fit h-5/6", inView ? "animate-image-rotate" : "[transform:rotateX(25deg)]")} ref={ref}>
                     <div
                         className={clsx(

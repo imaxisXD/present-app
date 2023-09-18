@@ -13,7 +13,7 @@ const config: Config = {
       "image-rotate": "image-rotate 1400ms ease forwards",
       "bg": 'animatedgradientwithtilt 30s ease infinite alternate',
       'text-bg': 'animatedgradient 10s ease infinite alternate',
-      "meteor-effect": "meteor 5s linear infinite",
+      "meteor-effect": "meteor 300s ease-in-out infinite",
       "image-glow": "image-glow 4100ms 600ms ease-out forwards",
     },
     keyframes: {
@@ -25,11 +25,11 @@ const config: Config = {
         "100%": { transform: "none" },
       },
       meteor: {
-        "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+        "0%": { transform: "rotate(215deg) translateX(0)", opacity: "0.5" },
         "70%": { opacity: "1" },
         "100%": {
           transform: "rotate(215deg) translateX(-500px)",
-          opacity: "0",
+          opacity: "0.1",
         },
       },
       //hero image glow animation

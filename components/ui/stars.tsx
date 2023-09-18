@@ -1,7 +1,6 @@
 function Stars() {
     return (
         <div id='stars' ></div>
-
     )
 }
 
