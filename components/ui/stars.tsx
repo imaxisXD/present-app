@@ -1,6 +1,8 @@
 function Stars() {
     return (
-        <div id='stars' ></div>
+        // <div className="overflow-hidden relative border border-red-400 h-screen w-full">
+        <div id='stars'></div>
+        // </div>
     )
 }
 

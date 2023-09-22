@@ -23,9 +23,43 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  width: 342px;
+  height: 65px;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  border: 1px solid #454545;
+  border-radius: 40px;
+  padding: 15px 30px;
+}
+
+.scroller {
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 3px;
+  padding-right: 3px;
+
+}
+
+.parallax span {
+  display: flex;
+  margin-right: 30px;
+  align-items: center;
+  gap: 30px;
+}
+
+
 #stars {
-  width: 2px;
-  height: 2px;
+  position: absolute;
+  top: 0;
+  width: 1.5px;
+  height: 1.5px;
   border-radius: 50%;
   animation: animStar 600s linear infinite;
   box-shadow: 779px 1331px rgba(255, 255, 255, 0.8468827211192267), 324px 42px rgba(255, 255, 255, 0.3178345035682452), 303px 586px rgba(255, 255, 255, 0.43967618025929515),
@@ -251,8 +285,8 @@ body {
 #stars:after {
   position: absolute;
   top: 2000px;
-  width: 2px;
-  height: 2px;
+  width: 0.5px;
+  height: 0.5px;
   border-radius: 50%;
   box-shadow: 779px 1331px rgba(255, 255, 255, 0.8468827211192267), 324px 42px rgba(255, 255, 255, 0.3178345035682452), 303px 586px rgba(255, 255, 255, 0.43967618025929515),
     1312px 276px rgba(255, 255, 255, 0.854949135946804), 451px 625px rgba(255, 255, 255, 0.2383364546803564), 521px 1931px rgba(255, 255, 255, 0.9730804094532162), 1087px 1871px rgba(255, 255, 255, 0.9999054509484303),

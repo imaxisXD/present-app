@@ -13,8 +13,10 @@ const config: Config = {
       "image-rotate": "image-rotate 1400ms ease forwards",
       "bg": 'animatedgradientwithtilt 30s ease infinite alternate',
       'text-bg': 'animatedgradient 10s ease infinite alternate',
-      "meteor-effect": "meteor 300s ease-in-out infinite",
+      "meteor-effect": "meteor 300s linear infinite",
       "image-glow": "image-glow 4100ms 600ms ease-out forwards",
+      "ping": "ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
+
     },
     keyframes: {
       // hero image slant animation
@@ -82,6 +84,15 @@ const config: Config = {
           transform: 'rotate(0deg)'
         },
       },
+      ping: {
+        '50%': {
+          transform: "scale(1.5)"
+        },
+        '75%, 100%': {
+          transform: "scale(2)",
+          opacity: "0"
+        }
+      }
     },
     extend: {
       fontFamily: {
@@ -93,7 +104,8 @@ const config: Config = {
         'outline-gray': '#3A3A3A',
         'dark-green': '#222F0A',
         'light-green': '#C0F560',
-        'lime-bg': '#A4FF00'
+        'lime-bg': '#A4FF00',
+        'card-inner-div': '#383838'
       },
       backgroundImage: {
         'star-pattern': "url('/star-bg.svg')",
@@ -103,7 +115,10 @@ const config: Config = {
           "radial-gradient(ellipse 50% 80% at 20% 40%,rgba(93,52,221,0.1),transparent), radial-gradient(ellipse 50% 80% at 80% 50%,rgba(120,119,198,0.15),transparent)",
         "hero-glow":
           "conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(36, 0, 255) 0deg, rgb(0, 135, 255) 67.5deg, rgb(108, 39, 157) 198.75deg, rgb(24, 38, 163) 251.25deg, rgb(54, 103, 196) 301.88deg, rgb(105, 30, 255) 360deg)",
-
+        "section-gradient":
+          "radial-gradient(50% 50% at 50% 50%,rgb(197 52 211 / 20%) 0%,rgba(171,171,171,0) 100%)",
+        "card-gradient-green":
+          "linear-gradient(242deg, rgba(21, 28, 28, 0.51) 68.8%, #4D6B1F 104.79%)",
       },
       backgroundSize: {
         '300%': '300%',
