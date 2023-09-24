@@ -11,19 +11,20 @@ export default function FeatureCard({
     title: string,
     img: string,
     content?: string,
-    zInded: number
+    zIndex: number
 
 }) {
     return (
-        <div className={clsx("sticky bottom-[6vh] w-11/12 h-[600px] rounded-lg border bg-card-gradient-green border-[#555] m-2 group", `z-${zIndex}`)}>
+        <div className={clsx("sticky bottom-[6vh] w-11/12 h-[600px] overflow-clip rounded-lg border bg-card-gradient-green border-[#555] m-2 group bg-background", `z-${zIndex}`)}>
             <div className="relative">
-                <h1 className="font-fixel text-4xl font-semibold p-5 ml-2">{title}</h1>
-                <div className="flex flex-row w-full h-full ">
-                    <div className="flex flex-col items-center w-1/2 ml-8 z-5">
-                        <div className="flex flex-col items-center w-11/12 h-56 gap-9 rounded-md border border-[#383838] bg-inside-card backdrop-blur-md bg-opacity-10">
-                            <h2 className="text-center font-fixel text-xl mt-4 p-2">Search influencer from any social media platform</h2>
+                <h1 className="font-fixel text-4xl font-semibold p-5 ml-4 mb-3 mt-3 heading-gradient">{title}</h1>
+                <div className="-z-1 items-center absolute bottom-28 right-0 bg-gradient-to-r from-lime-bg via-green-400 to-[#EBFF00] rounded-lg blur-3xl transition duration-1000 w-1/2 h-1/2 animate-bg bg-300% opacity-50 group-hover:opacity-90" />
+                <div className="z-10 flex flex-row w-full h-full">
+                    <div className="flex flex-col items-center w-1/2 mt-6 ml-8 z-5 gap-3">
+                        <div className="z-40 flex flex-col items-center w-11/12 h-52 gap-8 rounded-md border border-[#383838] bg-inside-card backdrop-blur-md bg-opacity-10">
+                            <h2 className="text-center font-medium font-fixel text-xl mt-4 p-2">Search influencer from any social media platform</h2>
                             <div className="logo-wall before:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] w-fit before:max-w-full before:bg-transparent before:from-[rgba(65,80,88,.3)] before:to-transparent before:to-70% sm:max-w-full relative before:-inset-x-[40px] before:-inset-y-[20px] flex items-center justify-center">
-                                <div className="logo-wall-mask flex overflow-x-hidden border border-[#454545] rounded-[40px] pt-2 pb-2 pl-1 pr-1 w-3/5">
+                                <div className="logo-wall-mask flex overflow-x-hidden border border-[#454545] rounded-[40px] pt-1 pb-1 pl-1 pr-1 w-3/5">
                                     <ul className="flex animate-logo-wall items-center gap-5 mr-5">
                                         <li>
                                             <svg
@@ -182,10 +183,11 @@ export default function FeatureCard({
                                     </ul>
                                 </div>
                             </div>
+                            <span className=" absolute -bottom-9 py-1 px-8 bg-[#B2F042] border border-transparent rounded-r-[10px] rounded-t-[10px] font-inter font-bold text-3xl text-black">OR</span>
                         </div>
-                        <span className=" py-1 px-8 bg-[#B2F042] border border-transparent rounded-r-[10px] rounded-t-[10px] font-inter font-bold text-3xl text-black">OR</span>
-                        <FollowerPointerCard className="flex items-center justify-center w-11/12">
-                            <div className="flex flex-col items-center justify-center h-56 gap-9 rounded-md border bg-black border-[#383838]">
+
+                        <FollowerPointerCard className="z-10">
+                            <div className="flex flex-col items-center justify-center h-52 gap-9 rounded-md border bg-black border-[#383838]">
                                 <p className="text-center font-fixel font-medium text-xl mt-4">
                                     Allow us to <span className="green-text">crawl</span> your website and recommend influencers for you
                                 </p>
@@ -193,8 +195,7 @@ export default function FeatureCard({
                         </FollowerPointerCard>
                     </div>
                     <div className="relative w-full h-[500px] ">
-                        <div className="z-1 items-center absolute -inset-0.5 top-1/2 bg-gradient-to-r from-lime-bg via-black to-purple-500 rounded-lg blur-3xl transition duration-1000 w-10/12 h-1/2 animate-bg bg-300% opacity-50 group-hover:opacity-70">
-                        </div>
+
                         <Image src={img}
                             alt="feature 1 : search from any social media"
                             fill={true}
@@ -204,11 +205,9 @@ export default function FeatureCard({
                         />
                     </div>
                 </div>
+
             </div>
         </div>
-
-
-
     )
 
 }

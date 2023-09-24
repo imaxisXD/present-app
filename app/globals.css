@@ -530,6 +530,13 @@ body {
     line-height: 140%;
 
   }
+
+  .heading-gradient {
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0));
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+  }
 }
 
 

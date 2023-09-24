@@ -122,7 +122,7 @@ const config: Config = {
         "section-gradient":
           "radial-gradient(50% 50% at 50% 50%,rgb(197 52 211 / 20%) 0%,rgba(171,171,171,0) 100%)",
         "card-gradient-green":
-          "linear-gradient(242deg, rgba(21, 28, 28, 0.51) 68.8%, #4D6B1F 104.79%)",
+          "linear-gradient(220deg, rgba(21, 28, 28, 0.51) 68.8%, #4D6B1F 104.79%)",
         "inside-card": "linear-gradient(175deg, #0F1414 4.38%, #1B240B 340.68%)"
       },
       backgroundSize: {

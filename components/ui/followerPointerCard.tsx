@@ -27,12 +27,10 @@ export const FollowerPointerCard = ({
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         if (rect) {
-            if (rect) {
-                const scrollX = window.scrollX;
-                const scrollY = window.scrollY;
-                x.set(e.clientX - rect.left + scrollX);
-                y.set(e.clientY - rect.top + scrollY);
-            }
+            const scrollX = window.scrollX;
+            const scrollY = window.scrollY;
+            x.set(e.clientX - rect.left + scrollX);
+            y.set(e.clientY - rect.top + scrollY);
         }
     };
     const handleMouseLeave = () => {
@@ -51,7 +49,7 @@ export const FollowerPointerCard = ({
                 cursor: "none",
             }}
             ref={ref}
-            className={twMerge("", className)}
+            className={twMerge("w-11/12", className)}
         >
             <AnimatePresence mode="wait">
                 {isInside && <FollowPointer x={x} y={y} title={title} />}
