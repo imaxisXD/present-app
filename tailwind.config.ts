@@ -15,8 +15,8 @@ const config: Config = {
       'text-bg': 'animatedgradient 10s ease infinite alternate',
       "meteor-effect": "meteor 300s linear infinite",
       "image-glow": "image-glow 4100ms 600ms ease-out forwards",
-      "ping": "ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
-
+      "ping": "ping 2s linear infinite",
+      "logo-wall": "logo 60s linear infinite"
     },
     keyframes: {
       // hero image slant animation
@@ -92,6 +92,10 @@ const config: Config = {
           transform: "scale(2)",
           opacity: "0"
         }
+      },
+      logo: {
+        "0%": { transform: "translateX(0)" },
+        "100%": { transform: "translateX(-100%)" }
       }
     },
     extend: {
@@ -119,6 +123,7 @@ const config: Config = {
           "radial-gradient(50% 50% at 50% 50%,rgb(197 52 211 / 20%) 0%,rgba(171,171,171,0) 100%)",
         "card-gradient-green":
           "linear-gradient(242deg, rgba(21, 28, 28, 0.51) 68.8%, #4D6B1F 104.79%)",
+        "inside-card": "linear-gradient(175deg, #0F1414 4.38%, #1B240B 340.68%)"
       },
       backgroundSize: {
         '300%': '300%',

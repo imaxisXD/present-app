@@ -5,7 +5,6 @@ import type { MouseEventHandler } from 'react';
 import Link from 'next/link';
 import { useMediaQuery } from 'usehooks-ts';
 import LogoType from './ui/logo';
-import { Button } from './ui/button';
 // import { constants } from '@/utils/constants';
 
 
@@ -91,7 +90,11 @@ export const Navbar = () => {
                 </div>
 
                 <ul className="order-2 flex items-center">
-                    <Button>Early Access</Button>
+                    <a href="#_" className="relative inline-flex items-center justify-center px-7 py-3 rounded-full overflow-hidden font-medium tracking-tighter text-white bg-purple-500 group ">
+                        <span className="absolute w-0 h-0 transition-all duration-700 ease-out bg-green-600 rounded-full group-hover:w-56 group-hover:h-56 "></span>
+                        <span className="absolute inset-0 w-full h-full -mt-1 rounded-full opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700 "></span>
+                        <span className="relative ">Early Access</span>
+                    </a>
                 </ul>
             </div>
         </nav>

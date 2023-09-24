@@ -8,7 +8,6 @@ import Beam from '@/components/ui/beam'
 import { Meteors } from '@/components/ui/meteor'
 import { LinkButton } from '@/components/ui/linkbutton'
 import FeatureButton from '@/components/ui/featureButton';
-import FeatureCard from '@/components/ui/feature-card';
 import FeatureWrapper from '@/components/featurewrapper';
 
 
@@ -31,7 +30,7 @@ export default function Home() {
                             Present simplify and automate your influencer marketing.<br /> Allowing you to focus on growth.
                         </Balancer>
                     </h3>
-                    <LinkButton href='/home'>Test</LinkButton>
+                    <LinkButton href='/home'>Early Access</LinkButton>
                 </section >
                 <section className="flex justify-center items-center mx-24 mt-20 mb-36 [perspective:2000px] ">
                     <div className={clsx("relative group w-fit h-5/6", inView ? "animate-image-rotate" : "[transform:rotateX(25deg)]")} ref={ref}>
@@ -71,7 +70,7 @@ export default function Home() {
                     </Balancer>
                 </h3>
             </div>
-            <div className='h-[64vh] bg-section-gradient'>
+            <div className='h-[64vh] '>
                 <FeatureWrapper />
             </div>
 

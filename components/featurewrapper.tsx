@@ -7,7 +7,7 @@ function FeatureWrapper() {
     return (
         <div className="flex flex-col items-center w-full p-4">
 
-            <FeatureCard />
+            <FeatureCard title="Step 1: Search" img="/search-card1.webp" zInded={50} />
 
             {/* <motion.div ref={ref} className="sticky bottom-[8vh] z-30 w-11/12 h-[600px] bg-red-300 rounded-lg border border-[#555] m-2 "
                 style={{

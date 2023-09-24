@@ -23,18 +23,9 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
-.parallax {
-  overflow: hidden;
-  letter-spacing: -2px;
-  width: 342px;
-  height: 65px;
-  white-space: nowrap;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  border: 1px solid #454545;
-  border-radius: 40px;
-  padding: 15px 30px;
+.logo-wall-mask {
+  -webkit-mask-image: linear-gradient(90deg, rgba(7, 7, 9, 0), #070709 15.77%, #070709 86.73%, rgba(7, 7, 9, 0));
+  mask-image: linear-gradient(90deg, rgba(7, 7, 9, 0), #070709 15.77%, #070709 86.73%, rgba(7, 7, 9, 0));
 }
 
 .scroller {
@@ -524,6 +515,20 @@ body {
     background-clip: text;
     color: transparent;
     background-size: 300%;
+    -webkit-background-clip: text;
+  }
+
+  .green-text {
+    background: linear-gradient(180deg, #EBFF00 11.2%, rgb(87, 232, 107) 100.2%);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    font-family: Cal Sans;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+
   }
 }
 
