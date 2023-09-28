@@ -28,22 +28,6 @@ body {
   mask-image: linear-gradient(90deg, rgba(7, 7, 9, 0), #070709 15.77%, #070709 86.73%, rgba(7, 7, 9, 0));
 }
 
-.scroller {
-  font-size: 64px;
-  display: flex;
-  white-space: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 3px;
-  padding-right: 3px;
-
-}
-
-.parallax span {
-  display: flex;
-  margin-right: 30px;
-  align-items: center;
-  gap: 30px;
-}
 
 
 #stars {
@@ -539,8 +523,6 @@ body {
   }
 }
 
-
-
 .meteor-top {
   transform: rotate(-180deg);
   animation: beam-animate-top 3s linear;
@@ -608,4 +590,8 @@ body {
     top: 100%;
     opacity: 0;
   }
+}
+
+#tsparticles {
+  height: 100%;
 }

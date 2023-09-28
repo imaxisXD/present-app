@@ -12,10 +12,10 @@ import { Meteors } from '@/components/ui/meteor'
 export default function Hero() {
     const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
     return (
-        <div className=' relative overflow-hidden'>
+        <div className='relative overflow-hidden'>
             <Meteors number={5} />
             <Stars />
-            <section className="flex flex-col justify-center items-center mx-auto text-center mt-24 w-11/12">
+            <section className="z-15 flex flex-col justify-center items-center mx-auto text-center mt-24 w-11/12">
                 <h2 className="text-white antialiased bg-[#FD86BF] p-1 w-40 h-9 flex justify-center items-center rounded-t-md rounded-r-md -rotate-12 font-inter font-medium text-lg">Powered by AI</h2>
                 <h1 className="text-7xl font-fixel font-extrabold mb-7 text-gradient antialiased leading-tight animate-text-bg">
                     <Balancer>Your all-in-one <br /> influencer marketing tool
@@ -29,7 +29,7 @@ export default function Hero() {
                 <LinkButton href='/home'>Early Access</LinkButton>
             </section >
             <section className="flex justify-center items-center mx-24 mt-20 mb-36 [perspective:2000px] ">
-                <div className={clsx("relative group w-fit h-5/6", inView ? "animate-image-rotate" : "[transform:rotateX(25deg)]")} ref={ref}>
+                <div className={clsx("relative group w-fit h-5/6 rounded-xl bg-black bg-opacity-50", inView ? "animate-image-rotate" : "[transform:rotateX(25deg)]")} ref={ref}>
                     <div
                         className={clsx(
                             "relative bg-hero-gradient animate-text-bg bg-300% rounded-xl",

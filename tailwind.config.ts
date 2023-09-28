@@ -113,6 +113,7 @@ const config: Config = {
       },
       backgroundImage: {
         'star-pattern': "url('/star-bg.svg')",
+        'grid': "url('/grid.webp')",
         "page-gradient":
           "radial-gradient(ellipse 80% 50% at 50% -20%,rgba(21,89,46, 0.3), transparent)",
         "hero-gradient":
