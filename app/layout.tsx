@@ -1,7 +1,7 @@
 import './globals.css'
 import { fixel, inter } from '@/styles/font'
 import type { Metadata } from 'next'
-
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: 'Present - Automate Influencer marketing',
@@ -17,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${fixel.variable}`}>
         {children}
+        <Analytics />
       </body>
     </html >
   )
