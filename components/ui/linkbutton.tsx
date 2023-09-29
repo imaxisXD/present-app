@@ -7,7 +7,7 @@ export function LinkButton({
     ...otherProps
 }: any) {
     return (
-        <a className="relative text-xl h-11 w-36 p-[1px] overflow-hidden cursor-pointer " {...otherProps}
+        <a className="relative text-xl h-14 w-48 p-[1px] overflow-hidden cursor-pointer " {...otherProps}
             style={{
                 borderRadius: borderRadius,
             }}>
@@ -20,7 +20,7 @@ export function LinkButton({
                 </MovingBorder>
             </div>
             <div
-                className="relative hover:bg-green-900 bg-green-900/[0.8] border border-green-500 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased"
+                className="relative hover:bg-green-900 bg-green-900/[0.8] border border-green-500 backdrop-blur-xl text-white font-medium flex items-center justify-center w-full h-full text-base antialiased"
                 style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
             >
                 {children}

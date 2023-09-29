@@ -36,7 +36,7 @@ export const CTASECTION = () => {
                         density: {
                             enable: false,
                         },
-                        value: 50,
+                        value: 100,
                     },
                     opacity: {
                         animation: {
@@ -65,7 +65,7 @@ export const CTASECTION = () => {
                             enable: true,
                             minimumValue: 0.7
                         },
-                        value: { min: 0.5, max: 1 },
+                        value: { min: 0.6, max: 1 },
                     },
                 }
             }}

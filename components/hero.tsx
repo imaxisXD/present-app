@@ -29,7 +29,7 @@ export default function Hero() {
                 <LinkButton href='/home'>Early Access</LinkButton>
             </section >
             <section className="flex justify-center items-center mx-24 mt-20 mb-36 [perspective:2000px] ">
-                <div className={clsx("relative group w-fit h-5/6 rounded-xl bg-black bg-opacity-50", inView ? "animate-image-rotate" : "[transform:rotateX(25deg)]")} ref={ref}>
+                <div className={clsx("relative group w-fit h-5/6 rounded-xl bg-background", inView ? "animate-image-rotate" : "[transform:rotateX(25deg)]")} ref={ref}>
                     <div
                         className={clsx(
                             "relative bg-hero-gradient animate-text-bg bg-300% rounded-xl",
@@ -44,7 +44,6 @@ export default function Hero() {
                         <Image src={'/dashboard.webp'} alt={'Image of the Present App'}
                             width={1440}
                             height={1020}
-                            priority={true}
                             className={clsx("relative border-2 border-white/5 backdrop-opacity-10 rounded-xl transition-opacity delay-[680ms]", inView ? "opacity-100" : "opacity-0")}
                         />
                     </div>
