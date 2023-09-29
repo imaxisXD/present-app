@@ -23,17 +23,12 @@ export default async function middleware(req: NextRequest) {
 
     // Get the pathname of the request (e.g. /, /about, /blog/first-post)
     const path = url.pathname;
-
-    console.log(hostname + ' hostname will show ' + hostname + '/trypresentapp.com');
-
     // rewrite root application to `/landing page` folder
     if (
         hostname === "localhost:3000" ||
         hostname === 'www.trypresentapp.com' ||
         hostname === 'trypresentapp.com'
     ) {
-        console.log('we here');
-
         return NextResponse.rewrite(
             new URL(`/trypresentapp.com${path === "/" ? "" : path}`, req.url),
         );
