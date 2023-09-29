@@ -24,15 +24,19 @@ export default async function middleware(req: NextRequest) {
     // Get the pathname of the request (e.g. /, /about, /blog/first-post)
     const path = url.pathname;
 
-    console.log(hostname + ' hostname will show' + hostname + '/trypresentapp.com');
+    console.log(hostname + ' hostname will show ' + hostname + '/trypresentapp.com');
 
     // rewrite root application to `/landing page` folder
     if (
         hostname === "localhost:3000" ||
-        hostname === 'https://www.trypresentapp.com' ||
+        hostname === 'www.trypresentapp.com' ||
         hostname === 'trypresentapp.com'
     ) {
-        return NextResponse.rewrite(new URL(`/trypresentapp.com${path === "/" ? "" : path}`, req.url));
+        console.log('we here');
+
+        return NextResponse.rewrite(
+            new URL(`/trypresentapp.com${path === "/" ? "" : path}`, req.url),
+        );
     }
 
     // rewrite everything else to `/[domain]/[path] dynamic route
