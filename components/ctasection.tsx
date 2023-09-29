@@ -27,16 +27,17 @@ export const CTASECTION = () => {
                         outModes: {
                             default: "out",
                         },
+                        direction: 'outside',
                         random: true,
-                        speed: 0.5,
+                        speed: 0.20,
                         straight: false,
                     },
                     number: {
-                        limit: 70,
+                        limit: 150,
                         density: {
                             enable: false,
                         },
-                        value: 100,
+                        value: 180,
                     },
                     opacity: {
                         animation: {

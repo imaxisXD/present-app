@@ -43,7 +43,7 @@ export const Navbar = () => {
             };
 
     return (
-        <nav className="bg-[#0F1414] bg-opacity-60 backdrop-blur-md container sticky inset-x-0 top-2 mt-0 z-[999] mx-auto w-screen lg:w-11/12 md:w-9/12 max-w-screen-xl py-1 px-2 border-outline-gray/[.33] md:rounded-full md:border">
+        <nav className="bg-[#0f141480] bg-opacity-60 backdrop-blur-md container sticky inset-x-0 top-2 mt-0 z-[999] mx-auto w-screen lg:w-11/12 md:w-9/12 max-w-screen-xl py-1 px-2 border-outline-gray/[.33] md:rounded-full md:border glass-xl/16">
             <div className="flex flex-wrap items-center justify-between w-full">
                 <AnimateHeight id="example-panel" duration={500} height={height}>
                     <Link
@@ -97,6 +97,7 @@ export const Navbar = () => {
                     </a>
                 </ul>
             </div>
+            <div className="absolute inset-0 glass-edge-3xl"></div>
         </nav>
     );
 };

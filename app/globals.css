@@ -597,3 +597,20 @@ body {
 .glow-shadow {
   box-shadow: -8px 0px 30px 0px rgba(214, 51, 51, 51%), 8px 0px 30px 0px rgba(50, 89, 227, 51%);
 }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.radar {
+  background-image: conic-gradient(#EFC0FF 3%, #EFC0FFd8 8%, transparent 35%);
+  animation: rotate 40s linear infinite;
+}
+
+.circle {
+  -moz-box-shadow: 0 0 2px #EFC0FF, 0 0 15px #EFC0FF;
+  -webkit-box-shadow: 0 0 2px #EFC0FF, 0 0 15px #EFC0FF;
+  box-shadow: 0 0 2px rgba(239, 192, 255, 0.29), 0 0 15px rgba(239, 192, 255, 0.20);
+}

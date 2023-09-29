@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import Image from "next/image";
-import { FollowerPointerCard } from "./followerPointerCard";
+import CustomCursorDiv from "./customCursorDiv";
 
 export default function FeatureCard({
     title,
@@ -21,7 +21,7 @@ export default function FeatureCard({
                 <div className="-z-1 items-center absolute bottom-28 right-0 bg-gradient-to-r from-lime-bg via-green-400 to-[#EBFF00] rounded-lg blur-3xl transition duration-1000 w-1/2 h-1/2 animate-bg bg-300% opacity-50 group-hover:opacity-90" />
                 <div className="z-10 flex flex-row w-full h-full">
                     <div className="flex flex-col items-center w-1/2 mt-6 ml-8 z-5 gap-3">
-                        <div className="z-40 flex flex-col items-center w-11/12 h-52 gap-8 rounded-md border border-[#383838] bg-inside-card backdrop-blur-md bg-opacity-10">
+                        <div className="z-40 flex flex-col items-center w-11/12 sm:h-52 h-32 gap-8 rounded-md border border-[#383838] bg-inside-card backdrop-blur-md bg-opacity-10">
                             <h2 className="text-center font-medium font-fixel md:text-xl mt-4 p-2 text-base">Search influencer from any social media platform</h2>
                             <div className="before:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] w-4/5 before:max-w-full before:bg-transparent before:from-[rgba(65,80,88,.3)] before:to-transparent before:to-70% sm:max-w-full relative before:-inset-x-[40px] before:-inset-y-[20px] flex items-center justify-center sm:visible invisible">
                                 <div className="logo-wall-mask flex overflow-x-hidden border border-[#454545] rounded-[40px] pt-1 pb-1 pl-1 pr-1 w-3/5">
@@ -185,14 +185,7 @@ export default function FeatureCard({
                             </div>
                             <span className="absolute -bottom-9 py-1 px-8 bg-[#B2F042] border border-transparent rounded-r-[10px] rounded-t-[10px] font-inter text-xl font-bold md:text-3xl text-black">OR</span>
                         </div>
-
-                        <FollowerPointerCard className="z-10">
-                            <div className="flex flex-col items-center justify-center h-52 gap-9 rounded-md border bg-black border-[#383838]">
-                                <p className="w-11/12 text-center font-fixel font-medium md:text-xl mt-4 text-base">
-                                    Allow us to <span className="green-text">crawl</span> your website and recommend influencers for you
-                                </p>
-                            </div>
-                        </FollowerPointerCard>
+                        <CustomCursorDiv />
                     </div>
                     <div className="relative w-full h-[500px]">
                         <Image src={img}
@@ -201,11 +194,11 @@ export default function FeatureCard({
                             style={{
                                 objectFit: 'contain',
                             }}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                     </div>
                 </div>
             </div>
         </div>
     )
-
 }
