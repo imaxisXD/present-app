@@ -9,7 +9,7 @@ function CustomCursorDiv() {
     </path>
 </svg>`
     return (
-        <div className="z-10 w-11/12 flex flex-col items-center justify-center h-52 gap-9 rounded-md border bg-black border-[#383838]"
+        <div className="w-11/12 flex flex-col items-center justify-center h-52 gap-9 rounded-md border bg-black border-[#383838] z-30"
             style={{
                 cursor: `url("data:image/svg+xml;utf8,${encodeURIComponent(cursor)}"), auto`
             }}>

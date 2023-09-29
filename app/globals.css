@@ -519,6 +519,13 @@ body {
     color: transparent;
     -webkit-background-clip: text;
   }
+
+  .text-gradient-static {
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.38));
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+  }
 }
 
 .meteor-top {

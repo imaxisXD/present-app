@@ -1,4 +1,3 @@
-import { clsx } from "clsx";
 import Image from "next/image";
 import CustomCursorDiv from "./customCursorDiv";
 
@@ -11,17 +10,17 @@ export default function FeatureCard({
     title: string,
     img: string,
     content?: string,
-    zIndex: number
+    zIndex?: number
 
 }) {
     return (
-        <div className={clsx("sticky bottom-[10vh] w-11/12 h-[600px] overflow-clip rounded-lg border bg-card-gradient-green border-[#555] m-2 group bg-background", `z-${zIndex}`)}>
+        <div className="sticky bottom-[10vh] w-11/12 h-[600px] overflow-clip rounded-lg border bg-card-gradient-green border-[#555] m-2 group bg-background z-50">
             <div className="relative">
                 <h1 className="font-fixel text-4xl font-semibold p-5 ml-4 mb-3 mt-3 heading-gradient text-left">{title}</h1>
                 <div className="-z-1 items-center absolute bottom-28 right-0 bg-gradient-to-r from-lime-bg via-green-400 to-[#EBFF00] rounded-lg blur-3xl transition duration-1000 w-1/2 h-1/2 animate-bg bg-300% opacity-50 group-hover:opacity-90" />
                 <div className="z-10 flex flex-row w-full h-full">
                     <div className="flex flex-col items-center w-1/2 mt-6 ml-8 z-5 gap-3">
-                        <div className="z-40 flex flex-col items-center w-11/12 sm:h-52 h-32 gap-8 rounded-md border border-[#383838] bg-inside-card backdrop-blur-md bg-opacity-10">
+                        <div className="z-50 flex flex-col items-center w-11/12 sm:h-52 h-32 gap-8 rounded-md border border-[#383838] bg-inside-card backdrop-blur-md bg-opacity-10">
                             <h2 className="text-center font-medium font-fixel md:text-xl mt-4 p-2 text-base">Search influencer from any social media platform</h2>
                             <div className="before:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] w-4/5 before:max-w-full before:bg-transparent before:from-[rgba(65,80,88,.3)] before:to-transparent before:to-70% sm:max-w-full relative before:-inset-x-[40px] before:-inset-y-[20px] flex items-center justify-center sm:visible invisible">
                                 <div className="logo-wall-mask flex overflow-x-hidden border border-[#454545] rounded-[40px] pt-1 pb-1 pl-1 pr-1 w-3/5">
@@ -199,6 +198,6 @@ export default function FeatureCard({
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

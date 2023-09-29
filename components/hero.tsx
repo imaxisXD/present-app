@@ -29,7 +29,7 @@ export default function Hero() {
                 <LinkButton href='/home'>Early Access</LinkButton>
             </section >
             <section className="flex justify-center items-center mx-24 mt-20 mb-36 [perspective:2000px] ">
-                <div className={clsx("relative group w-fit h-5/6 rounded-xl bg-background", inView ? "animate-image-rotate" : "[transform:rotateX(25deg)]")} ref={ref}>
+                <div className={clsx("relative group w-fit h-5/6 rounded-xl bg-[#0c1310] bg-opacity-100", inView ? "animate-image-rotate" : "[transform:rotateX(25deg)]")} ref={ref}>
                     <div
                         className={clsx(
                             "relative bg-hero-gradient animate-text-bg bg-300% rounded-xl",
