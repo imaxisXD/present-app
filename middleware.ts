@@ -24,7 +24,7 @@ export default async function middleware(req: NextRequest) {
     // Get the pathname of the request (e.g. /, /about, /blog/first-post)
     const path = url.pathname;
 
-    console.log(hostname);
+    console.log(hostname + ' hostname will show' + hostname + '/trypresentapp.com');
 
     // rewrite root application to `/landing page` folder
     if (
