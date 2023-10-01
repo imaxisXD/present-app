@@ -42,6 +42,7 @@ export default function Hero() {
                         <Beam direction='side' />
                         <Beam direction='side' />
                         <Image src={'/dashboard.webp'} alt={'Image of the Present App'}
+                            loading="lazy"
                             width={1440}
                             height={1020}
                             className={clsx("relative border-2 border-white/5 backdrop-opacity-10 rounded-xl transition-opacity delay-[680ms]", inView ? "opacity-100" : "opacity-0")}

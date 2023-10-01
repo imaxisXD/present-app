@@ -1,75 +1,43 @@
-'use client';
-import { useCallback } from "react";
-import Particles from "react-particles";
-import type { Engine } from "tsparticles-engine";
-import { loadSnowPreset } from "tsparticles-preset-snow";
+import { ParticleSection } from '@/components/ui/ctasection';
 
-export const CTASECTION = () => {
-    const particlesInit = useCallback(async (engine: Engine) => {
-        await loadSnowPreset(engine);
-    }, []);
-
-
-
+function CTASECTION() {
     return (
-        <Particles
-            id="tsparticles"
-            init={particlesInit}
-            options={{
-                fullScreen: { enable: false, zIndex: 10 },
-                fpsLimit: 60,
-                particles: {
-                    color: {
-                        value: "#ffffff",
-                    },
-                    move: {
-                        enable: true,
-                        outModes: {
-                            default: "out",
-                        },
-                        direction: 'outside',
-                        random: true,
-                        speed: 0.20,
-                        straight: false,
-                    },
-                    number: {
-                        limit: 150,
-                        density: {
-                            enable: false,
-                        },
-                        value: 180,
-                    },
-                    opacity: {
-                        animation: {
-                            enable: true,
-                            minimumValue: 0.2,
-                            speed: 0.25,
-                            sync: true
-                        },
-                        random: {
-                            enable: true,
-                            minimumValue: 0.5
-                        },
-                        value: 1
-                    },
-                    shape: {
-                        type: "circle",
-                    },
-                    size: {
-                        animation: {
-                            enable: true,
-                            minimumValue: 0.4,
-                            speed: 0.25,
-                            sync: false
-                        },
-                        random: {
-                            enable: true,
-                            minimumValue: 0.7
-                        },
-                        value: { min: 0.6, max: 1 },
-                    },
-                }
-            }}
-        />
-    );
-};
+
+        <section className='relative h-[500px] bg-black group overflow-clip'>
+            <div className='absolute m-auto h-full -top-7 left-0 right-0 w-[555px] '>
+                <div className='h-[555px] w-[555px] rounded-full relative '>
+                    <div className='h-[555px] w-[555px] radar rounded-full absolute m-auto left-0 right-0' />
+                    <div className='h-[542px] w-[542px] rounded-full bg-black absolute m-auto inset-x-0 inset-y-0 circle blur-sm'></div>
+                </div>
+            </div>
+            <div className='absolute m-auto h-full -top-7 left-0 right-0 w-[555px]'>
+                <div className='h-[555px] w-[555px] rounded-full relative rotate-180 '>
+                    <div className='h-[555px] w-[555px] radar rounded-full absolute m-auto left-0 right-0' />
+                    <div className='h-[542px] w-[542px] rounded-full bg-black absolute m-auto inset-x-0 inset-y-0 circle blur-sm'></div>
+                </div>
+            </div>
+            <div className='h-full bg-grid bg-black group-hover:bg-opacity-[0.90] transition duration-1000'>
+                <ParticleSection />
+                <div className='absolute m-auto h-full top-0 left-0 right-0 flex flex-col items-center justify-center gap-3'>
+                    <h2 className='font-fixel text-3xl font-semibold text-center'>Join the waitlist for early access.</h2>
+                    <div className='flex items-center gap-2'>
+                        <span className="relative flex h-3 w-3">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 "></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-[#04B701] border border-[#09F404]"></span>
+                        </span>
+                        <p className='text-xl font-fixel text-[#949494] font-medium text-center'>Currently in development</p>
+                    </div>
+                    <form action="" className='flex flex-wrap border border-[#9A9A9A] h-14 rounded-full w-full md:w-5/12 justify-between item-center mx-5 md:mx-0'>
+                        <input type="email" name="email-field" id="email-field" className='w-2/3 rounded-l-full bg-black backdrop-blur-sm bg-opacity-20 pl-6 md:text-xl text-base focus:outline-none'
+                            placeholder='Enter your email'
+                        />
+                        <button className='bg-white text-center text-black rounded-full font-semibold text-2xl glow-shadow md:px-10 w-1/3'>Join</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default CTASECTION

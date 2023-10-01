@@ -79,7 +79,6 @@ export const Navbar = () => {
                         </ul>
                     </AnimateHeight>
                 </div>
-
                 <ul className="order-2 flex items-center">
                     <a href="#_" className="relative inline-flex items-center justify-center px-7 py-3 rounded-full overflow-hidden font-medium tracking-tighter text-white bg-purple-500 group ">
                         <span className="absolute w-0 h-0 transition-all duration-700 ease-out bg-green-600 rounded-full group-hover:w-56 group-hover:h-56 "></span>
