@@ -1,6 +1,42 @@
+'use client';
 import { ParticleSection } from '@/components/ui/ctasection';
+import { useState } from 'react';
 
 function CTASECTION() {
+    const [email, setEmail] = useState("");
+
+    const handleFormChange = (e: any) => {
+        setEmail(
+            e.target.value,
+        );
+    };
+
+    async function handleForm(e: React.FormEvent) {
+        e.preventDefault();
+        const formData = {
+            email: email
+        }
+        console.log(formData);
+
+        try {
+            const response = await fetch('/api/forms', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData), // Assuming formData is an object
+            });
+
+            if (response.ok) {
+                console.log('Form submitted successfully');
+            } else {
+                console.error('Form submission failed');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
+    }
+
     return (
 
         <section className='relative h-[500px] bg-black group overflow-clip'>
@@ -27,11 +63,16 @@ function CTASECTION() {
                         </span>
                         <p className='text-xl font-fixel text-[#949494] font-medium text-center'>Currently in development</p>
                     </div>
-                    <form action="" className='flex flex-wrap border border-[#9A9A9A] h-14 rounded-full w-full md:w-5/12 justify-between item-center mx-5 md:mx-0'>
-                        <input type="email" name="email-field" id="email-field" className='w-2/3 rounded-l-full bg-black backdrop-blur-sm bg-opacity-20 pl-6 md:text-xl text-base focus:outline-none'
+                    <form onSubmit={handleForm} className='flex flex-wrap border border-[#9A9A9A] h-14 rounded-full w-full md:w-5/12 justify-between item-center mx-5 md:mx-0'>
+                        <input
+                            type="email"
+                            name="email-field" id="email-field" className='w-2/3 rounded-l-full bg-black backdrop-blur-sm bg-opacity-20 pl-6 md:text-xl text-base focus:outline-none'
                             placeholder='Enter your email'
+                            value={email}
+                            onChange={handleFormChange}
+                            required
                         />
-                        <button className='bg-white text-center text-black rounded-full font-semibold text-2xl glow-shadow md:px-10 w-1/3'>Join</button>
+                        <button type="submit" className='bg-white text-center text-black rounded-full font-semibold text-2xl glow-shadow md:px-10 w-1/3'>Join</button>
                     </form>
 
                 </div>
