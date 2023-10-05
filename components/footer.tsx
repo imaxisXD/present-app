@@ -30,8 +30,8 @@ function Footer() {
                             Your all in one influencer marketing tool.<br />
                             That automates the influencer marketing for you
                         </p>
-                        <a href="/cta-section"
-                            className='border border-[#B69FFF] font-inter text-xl px-12 py-3 rounded-full bg-black text-[#F7D1FD] transition duration-100 mt-5 hover:-translate-y-1 hover:bg-black/50 '>
+                        <a href="#cta-section"
+                            className='shadow-2xl border border-[#231f31] font-inter font-medium text-xl px-12 py-3 rounded-full bg-[#b186fd] text-black hover:text-white transition duration-200 mt-5 hover:-translate-y-1 hover:bg-black/50 '>
                             Join early access
                         </a>
                     </div>

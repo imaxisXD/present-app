@@ -4,7 +4,7 @@ import FeatureWrapper from '@/components/featurewrapper';
 
 function Featsection() {
     return (
-        <section className='pb-28 bg-gradient-to-b from-background to-black'>
+        <section id="feat-section" className='pb-28 bg-gradient-to-b from-background to-black'>
             <div className="relative flex flex-col pb-7 mb-5 gap-1 justify-center items-center text-center mx-auto bg-section-gradient" >
                 <span className='w-11/12 h-[1px] bg-slate-400 opacity-25 rounded-3xl mb-16' />
                 <FeatureButton />

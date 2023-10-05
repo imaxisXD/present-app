@@ -15,7 +15,7 @@ export default function Hero() {
         <div className='relative overflow-hidden'>
             <Meteors number={5} />
             <Stars />
-            <section className="z-15 flex flex-col justify-center items-center mx-auto text-center mt-24 w-11/12">
+            <section id='hero' className="z-15 flex flex-col justify-center items-center mx-auto text-center mt-24 w-11/12">
                 <h2 className="text-white antialiased bg-[#FD86BF] p-1 w-40 h-9 flex justify-center items-center rounded-t-md rounded-r-md -rotate-12 font-inter font-medium text-lg">Powered by AI</h2>
                 <h1 className="text-7xl font-fixel font-extrabold mb-7 text-gradient antialiased leading-tight animate-text-bg">
                     <Balancer>Your all-in-one <br /> influencer marketing tool
@@ -26,7 +26,7 @@ export default function Hero() {
                         Present simplify and automate your influencer marketing.<br /> Allowing you to focus on growth.
                     </Balancer>
                 </h3>
-                <LinkButton href='/home'>Early Access</LinkButton>
+                <LinkButton href='#cta-section'>Early Access</LinkButton>
             </section >
             <section className="flex justify-center items-center mx-24 mt-20 mb-36 [perspective:2000px] ">
                 <div className={clsx("relative group w-fit h-5/6 rounded-xl bg-[#0c1310] bg-opacity-100", inView ? "animate-image-rotate" : "[transform:rotateX(25deg)]")} ref={ref}>
