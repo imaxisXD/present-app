@@ -1,11 +1,13 @@
 import Image from "next/image"
 import FeatureCard from "./ui/feature-card"
 function FeatureWrapper() {
-    return (
-        <div className="flex flex-col items-center w-full p-4">
-            <FeatureCard title="Step 1: Search" img="/search-card1.webp" zIndex={50} />
 
-            <div className="sticky overflow-clip bottom-[4vh] z-40 w-11/12 h-[600px] bg-black rounded-lg border border-[#555] m-5 bg-card-gradient-blue group">
+    return (
+        <div
+            className="flex flex-col items-center w-full p-4 " >
+            <FeatureCard title="Step 1: Search" img="/search-card1.webp" zIndex={50} />
+            <div
+                className="sticky overflow-clip bottom-[4vh] z-40 w-11/12 h-[600px] bg-black rounded-lg border border-[#555] m-5 bg-card-gradient-blue group">
                 <div className="absolute bg-grid top-0 w-full">
                     <h1 className="font-fixel text-4xl font-semibold p-5 ml-4 mb-3 mt-3 heading-gradient text-left">Step 2 : Choose Your Influencer</h1>
                     <div className="-z-1 border items-center absolute bottom-[10rem] right-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur-3xl transition duration-1000 w-1/2 h-1/2 animate-bg bg-300% opacity-50 group-hover:opacity-100" />
@@ -31,8 +33,8 @@ function FeatureWrapper() {
                     </div>
                 </div>
             </div>
-
-            <div className="sticky overflow-clip bottom-[5vh] z-30 w-11/12 h-[600px] bg-black rounded-lg border border-[#555] m-5 bg-card-gradient-purple group">
+            <div
+                className="sticky overflow-clip bottom-[5vh] z-30 w-11/12 h-[600px] bg-black rounded-lg border border-[#555] m-5 bg-card-gradient-purple group">
                 <div className="absolute bg-grid top-0 w-full">
                     <h1 className="font-fixel text-4xl font-semibold p-5 ml-4 mb-3 mt-3 heading-gradient text-left">Step 3: Automate the Process</h1>
                     <div className="z-1 border items-center absolute bottom-[10rem] right-0 bg-gradient-to-r from-[#A34BB9] to-pink-600 rounded-lg blur-3xl transition duration-1000 w-1/2 h-1/2 animate-bg bg-300% opacity-50 group-hover:opacity-100" />
@@ -58,7 +60,6 @@ function FeatureWrapper() {
                     </div>
                 </div>
             </div>
-
         </div >
     )
 }
