@@ -124,7 +124,11 @@ const config: Config = {
           "radial-gradient(50% 50% at 50% 50%,rgb(197 52 211 / 20%) 0%,rgba(171,171,171,0) 100%)",
         "card-gradient-green":
           "linear-gradient(220deg, rgba(21, 28, 28, 0.51) 68.8%, #4D6B1F 104.79%)",
-        "inside-card": "linear-gradient(175deg, #0F1414 4.38%, #1B240B 340.68%)"
+        "inside-card": "linear-gradient(175deg, #0F1414 4.38%, #1B240B 340.68%)",
+        "card-gradient-blue":
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.43) 0%, rgba(0, 0, 0, 0.43) 100%), linear-gradient(242deg, rgba(21, 28, 28, 0.51) 68.8%, #4058D7 104.79%)",
+        "card-gradient-purple":
+          'linear-gradient(0deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.42) 100%), linear-gradient(242deg, rgba(21, 28, 28, 0.51) 68.8%, #8848B1 104.79%);'
       },
       backgroundSize: {
         '300%': '300%',

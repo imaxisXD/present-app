@@ -14,7 +14,7 @@ export default function FeatureCard({
 
 }) {
     return (
-        <div className="sticky bottom-[10vh] w-11/12 h-[600px] overflow-clip rounded-lg border bg-card-gradient-green border-[#555] m-2 group bg-background z-50">
+        <div className="sticky bottom-[3vh] w-11/12 h-[600px] overflow-clip rounded-lg border bg-card-gradient-green border-[#555] m-5 group bg-background z-50">
             <div className="relative">
                 <h1 className="font-fixel text-4xl font-semibold p-5 ml-4 mb-3 mt-3 heading-gradient text-left">{title}</h1>
                 <div className="-z-1 items-center absolute bottom-28 right-0 bg-gradient-to-r from-lime-bg via-green-400 to-[#EBFF00] rounded-lg blur-3xl transition duration-1000 w-1/2 h-1/2 animate-bg bg-300% opacity-50 group-hover:opacity-90" />
@@ -186,12 +186,14 @@ export default function FeatureCard({
                         </div>
                         <CustomCursorDiv />
                     </div>
-                    <div className="relative w-full h-[500px]">
+                    <div className="relative w-full h-[549px]">
                         <Image src={img}
                             alt="feature 1 : search from any social media"
                             fill={true}
                             style={{
                                 objectFit: 'contain',
+                                top: '-33px',
+                                left: '1px'
                             }}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />

@@ -43,7 +43,7 @@ export const Navbar = () => {
             };
 
     return (
-        <nav className="bg-[#0f141480] bg-opacity-60 backdrop-blur-md container sticky inset-x-0 top-2 mt-0 z-[999] mx-auto w-screen lg:w-11/12 md:w-9/12 max-w-screen-xl py-1 px-2 border-outline-gray/[.33] md:rounded-full md:border">
+        <nav className="bg-[#0f141480] bg-opacity-60 backdrop-blur-md container sticky inset-x-0 top-2 mt-0 z-[999] mx-auto w-11/12 lg:w-11/12 md:w-9/12 max-w-screen-xl py-1 px-2 border-outline-gray/[.33] md:rounded-full md:border">
             <div className="flex flex-wrap items-center justify-between w-full">
                 <AnimateHeight id="example-panel" duration={10} height={height}>
                     <Link
@@ -55,7 +55,7 @@ export const Navbar = () => {
                         <span className="font-semibold text-xl text-gradient-static ">Present</span>
                     </Link>
                 </AnimateHeight>
-                <div className="order-3 w-full md:order-1 md:w-auto ">
+                <div className="order-3 w-full hidden md:block md:order-1 md:w-auto ">
                     <AnimateHeight id="example-panel" duration={50} height={height}>
                         <ul className="bg-gray-1 dark:bg-graydark-1 flex flex-col text-sm md:flex-row md:items-center ">
                             <li>
@@ -80,7 +80,7 @@ export const Navbar = () => {
                     </AnimateHeight>
                 </div>
                 <ul className="order-2 flex items-center">
-                    <a href="#cta-section" className="relative inline-flex items-center justify-center px-7 py-3 rounded-full overflow-hidden font-medium tracking-tighter text-white bg-purple-500 group ">
+                    <a href="#cta-section" className="relative inline-flex items-center justify-center px-5 md:px-7 py-3 rounded-full overflow-hidden font-medium tracking-tighter text-white bg-purple-500 group ">
                         <span className="absolute w-0 h-0 transition-all duration-700 ease-out bg-green-600 rounded-full group-hover:w-56 group-hover:h-56 "></span>
                         <span className="absolute inset-0 w-full h-full -mt-1 rounded-full opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700 "></span>
                         <span className="relative ">Early Access</span>
